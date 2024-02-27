@@ -3,19 +3,20 @@
 // count the number of set bits (1's)
 
 //display the number in binary
-void bin(unsigned int n){
+void bin(int n){
     
-    printf("\n%u : ",n);
+    printf("\n%d : ",n);
     for(int i=((8*sizeof(n))-1);i>=0;i--){
         printf("%d",n>>i & 1);
     }
 }
 
 int main(){
-    unsigned int num,count=0;
-
+    unsigned count=0;
+    int num;
+    
     printf("\nEnter the Number : ");
-    scanf("%u",&num);
+    scanf("%d",&num);
     bin(num);
 
     for(int i=31;i>=0;i--){
