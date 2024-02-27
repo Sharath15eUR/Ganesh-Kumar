@@ -1,0 +1,31 @@
+OUTPUT : 16
+
+EPLANATION : 
+double occupies 8 bytes
+char occupies 1 bytes
+A=1 byte , B=8 byte , C=1 byte
+Total 10 bytes is required for InfoData struct, since it is an 32 bit machine at an single clock cycle 4 bytes can be processed.
+So struct uses an concept called padding which will make the memory allocation as per the processor bus width, it will be multiple of 4
+
+address     1   2   3   4
+4         | A   x   x   x
+8         | B   B   B   B
+12        | B   B   B   B
+16        | C   x   x   x
+
+x => unknown data
+
+So 16 bytes of memory will be occupied by InfoData,Eventhough it requires 10 bytes. Allocating 6 bytes of blank space.
+
+PROGRAM :
+#include <stdio.h>
+typedef struct {
+    char A;
+    double B;
+    char C;
+} InfoData;
+
+int main() {
+    printf("Size of Structure = %zu\n", sizeof(InfoData)); 
+    return 0;
+}

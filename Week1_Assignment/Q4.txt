@@ -1,0 +1,13 @@
+Write an equivalent pointer expression for fetching the value of array element a[i][j][k][2]
+
+Answer :  *(*(*(*(a+i)+j)+k)+2)
+
+Explanation :
+a is the base address
+*(a+i) is the address of i th row
+*(*(a+i)+j) is the address of i th row, j th column
+*(*(*(a+i)+j)+k) is the address of i th row, j th column, k th element
+*(*(*(*(a+i)+j)+k)+2) is the address of i th row, j th column, k th element, 2nd value
+
+
+

@@ -1,0 +1,30 @@
+
+OUTPUT : 87654321
+
+EXPLANATION : 
+when j=0, rev=0x00000008
+when j=1, rev=0x00000087
+when j=2, rev=0x00000876
+when j=3, rev=0x00008765
+when j=4, rev=0x00087654
+when j=5, rev=0x00876543
+when j=6, rev=0x08765432
+when j=7, rev=0x87654321
+
+PROGRAM :
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    unsigned int var = 0x12345678;
+    unsigned int rev = 0;
+
+    for (int j = 0; j < 8; j++) {
+        rev = (rev << 4) | ((var >> (4 * j)) & 0xF);
+    }
+
+    printf("%X", rev);
+
+    return 0;
+}
+
