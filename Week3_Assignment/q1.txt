@@ -1,0 +1,4 @@
+User presses Ctrl+C : SIGINT (Signal Interrupt)
+kill() system call is invoked: SIGKILL (force terminate)
+CPU tries to execute an illegal instruction : SIGILL (Illegal Instruction)
+When the program accesses unassigned memory: SIGSEGV (Segmentation Violation)

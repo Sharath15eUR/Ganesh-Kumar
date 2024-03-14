@@ -1,0 +1,34 @@
+
+Avoiding Race Conditions:
+
+1. Use Synchronization Mechanisms:
+   * Implement synchronization mechanisms such as mutexes, semaphores, and condition variables to coordinate access to shared resources.
+   * Use mutex locks to ensure exclusive access to critical sections of code where shared data is accessed.
+   * Employ atomic operations or atomic data types to perform operations on shared variables in a thread*safe manner.
+
+2. Critical Section Protection:
+   * Identify critical sections of code where shared resources are accessed and protect them using synchronization primitives.
+   * Use mutexes or other synchronization mechanisms to enforce mutual exclusion, ensuring that only one thread can access a shared resource at a time.
+   * Minimize the length of critical sections to reduce the likelihood of contention and improve concurrency.
+
+3. Avoid Global Variables:
+   * Minimize the use of global variables, as they can lead to unintended sharing of data among threads and increase the risk of race conditions.
+   * Encapsulate shared data within data structures and pass them as parameters to threads, avoiding direct access to global variables.
+   * Utilize thread*local storage or other mechanisms to maintain separate instances of data for each thread when appropriate.
+
+Avoiding Deadlocks:
+
+1. Lock Ordering:
+   * Establish a consistent lock acquisition order across all threads to prevent circular dependencies.
+   * Define a strict hierarchy for acquiring locks and always acquire locks in the same order to avoid potential deadlock situations.
+   * Document and enforce lock acquisition order to ensure consistency and prevent deadlocks.
+
+2. Avoid Nested Locks:
+   * Minimize the use of nested locks, as they can complicate lock acquisition and increase the risk of deadlock.
+   * Refactor code to reduce nested locking scenarios and simplify lock acquisition logic.
+   * Consider alternative synchronization patterns or redesign the software to avoid nested locking where possible.
+
+3. Deadlock Detection and Prevention:
+   * Implement deadlock detection mechanisms to identify and recover from potential deadlock situations.
+   * Use timeouts or deadlock detection algorithms to detect stalled threads and release resources to break potential deadlocks.
+   * Design software with deadlock prevention strategies in mind, such as avoiding circular resource dependencies and ensuring consistent lock acquisition order.

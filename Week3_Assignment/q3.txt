@@ -1,0 +1,16 @@
+PROGRAM:
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    if (fork() && (!fork())) {
+        if (fork() || fork()) {
+            fork();
+        }
+    }
+    printf("2");
+    return 0;
+}
+
+OUTPUT : The program prints 2's depends on the scheduling and timing differences in process creation and execution.
+        It varies for different operating systems.

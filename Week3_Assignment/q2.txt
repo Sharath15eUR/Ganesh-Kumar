@@ -1,0 +1,14 @@
+1. gdb ./file_name
+        
+2. gdb
+  file ./file_name
+  break line_no
+
+3. continue
+
+4. delete breakpoint_no
+
+5. backtrace
+  info args frame_no
+
+    

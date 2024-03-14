@@ -1,0 +1,19 @@
+Purpose:
+fork(): Creates a new process by duplicating the current process.
+exec(): Replaces the current process's memory image with a new program.
+
+Result:
+fork(): Returns the PID of the child process in the parent process and 0 in the child process.
+exec(): Does not return if successful; replaces the current process with the new program.
+
+Creation of Processes:
+fork(): Creates a new process by duplicating the current process.
+exec(): Does not create a new process; replaces the current process's memory image.
+
+Memory and Resources:
+fork(): Duplicates the entire memory space and resources of the parent process to the child process.
+exec(): Replaces the entire memory image of the current process with that of the new program.
+
+Usage:
+fork(): Used to create new processes, such as forking off child processes for parallel execution.
+exec(): Used to execute different programs within the same process, commonly after forking a new process.

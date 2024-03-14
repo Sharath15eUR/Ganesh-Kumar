@@ -1,0 +1,19 @@
+Process:
+1. Represents a program in execution.
+2. Consumes maximum time to stop.
+3. Needs more time for work and conception.
+4. Context switching takes maximum time.
+5. Less effective in terms of communication.
+6. Requires more resources.
+7. Considered a heavyweight process.
+8. If one process is blocked, it does not affect the operation of another process.
+
+Thread:
+1. A segment of a process responsible for executing specific tasks.
+2. Consumes minimum time to stop.
+3. Needs less time for work and conception.
+4. Context switching takes minimum time.
+5. Effective in terms of communication.
+6. Requires fewer resources compared to processes.
+7. Considered a lightweight process.
+8. If one thread is blocked, it affects the execution of another thread within the same process.
