@@ -1,0 +1,19 @@
+Explain the connection procedure followed in client server communication?
+
+
+1.Client Initialization: The client initializes the communication process by creating a socket. A
+socket is an endpoint for communication between two machines.
+
+2.Server Initialization: Similarly, the server initializes by creating its own socket and binds it to a specific port on the server machine. This allows the server to listen for incoming connections on that port.
+
+3.Client Request: The client initiates a connection request to the server by specifying the server's IP address and port number. This request is sent over the network.
+
+4.Server Acceptance: Upon receiving the connection request, the server's operating system checks if there is a process (usually called a listener) that is bound to the port specified in the request. If so, the server accepts the connection.
+
+5.Handshake: Once the server accepts the connection, a handshake process occurs between the client and the server. During this process, they establish the rules and parameters for communication, such as the communication protocol, encryption settings (if any), and other relevant parameters.
+
+6.Data Exchange: After the handshake is complete, the client and server can start exchanging data. The client may send requests to the server, and the server responds accordingly. This exchange can continue until the communication session is terminated.
+
+7.Session Termination: Either the client or the server (or both) can initiate the termination of the communication session. This could be due to the completion of the task, an error condition, or a deliberate termination request.
+
+8.Connection Closure: Upon completion of the communication session, the client and server close their respective sockets, freeing up system resources and terminating the connection.

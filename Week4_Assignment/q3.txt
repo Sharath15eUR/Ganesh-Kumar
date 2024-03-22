@@ -1,0 +1,4 @@
+What is Datagram Socket?
+
+
+A Datagram Socket is a type of network socket used in network programming, particularly in connectionless communication protocols like UDP (User Datagram Protocol). Unlike stream sockets (like those used with TCP), datagram sockets send discrete packets of data called datagrams without establishing a continuous connection between the sender and receiver.

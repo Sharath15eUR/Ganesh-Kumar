@@ -1,0 +1,4 @@
+2.What is the use of bind() function in socket programming ?
+
+
+The bind() function in socket programming assigns a specific network address and port number to a server program, ensuring that incoming data is directed to the correct location for processing.
